@@ -1,0 +1,25 @@
+import java.util.*;
+class Codechef{
+    public static void main (String[] args){
+        Scanner sc =new Scanner(System.in);
+        int T=sc.nextInt();
+        while(T>0){
+            float num[]=new float[4];
+            for(int i=0;i<4;i++){
+                num[i]=sc.nextFloat();
+            }
+            float T1=num[0]*num[0];
+            float T2=num[1]*num[1];
+            float R1=num[2]*num[2]*num[2];
+            float R2=num[3]*num[3]*num[3];
+            float a=T1/R1;
+            float b=T2/R2;
+            if(a==b){
+                System.out.println("YES");
+            }else{
+                System.out.println("NO");
+            }
+            T--;
+        }
+    }
+} 
