@@ -1,0 +1,47 @@
+ import java.util.*;
+import java.io.*;
+class Codechef{
+    public static void main (String[] args)throws IOException{
+    try{    
+        Scanner sc =new Scanner(System.in);
+        int T =  sc.nextInt();
+        while(T-->0){
+            int count=0;
+            int N= sc.nextInt();
+            int arr[][]=new int [3][3];
+            for(int i = 0; i < 3; i++){
+               for (int j = 0; j < 3; j++){
+                    arr[i][j]=sc.nextInt();
+               }
+            }
+            
+            
+            
+            int r1=arr[0][0];
+            int r2=arr[1][0];
+            int r3=arr[2][0];
+            int g1=arr[0][1];
+            int g2=arr[1][1];
+            int g3=arr[2][1];
+            int b1=arr[0][2];
+            int b2=arr[1][2];
+            int b3=arr[2][2];
+            
+            int upper=g1+b1+b2;
+            int lower=r2+r3+g3;
+            
+
+            if((r1==g2) && (g2==b3) && (b3==N)){
+                  System.out.println("0");
+            }else{
+                  System.out.println(Math.max(upper, lower));
+            }
+          
+            
+        }
+    }catch(Exception e){
+			return;
+		}
+        
+    }
+} 
